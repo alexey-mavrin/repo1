@@ -130,3 +130,22 @@ with the file. Below is the correspondance between git file state and
 | `nothing to commit, working tree clean` | all files are in tracked state |
 
 Keep in mind that file could be in `staged` and `modified` state at the same moment.
+
+## Commit messages
+
+In general, commit messages should be
+- concise
+- informative
+- conformed to the accepted scheme
+
+As an example, it could contain the changed entity/subsystem name, the colon,
+and the description of the change made, like this:
+```
+~/Learn/Git/repo1# git log --oneline
+d25360c (HEAD -> main, origin/main) README.md: git status command
+4abc0a4 README.md: git file states
+527a2da README.md: HEAD
+2ce5430 README.md: add info on git log
+31dd266 README.md: add info on commit hash
+0fbe8ab README.md: add some git commands
+```
