@@ -114,4 +114,19 @@ flowchart TD;
   T --> MT;
 ```
 
-Note that file states could be observed via `git state` command.
+Note that file states could be observed via `git status` command.
+
+## Git status command
+
+With the output of the `git status` command you can see what is going on
+with the file. Below is the correspondance between git file state and
+`git status` output
+
+| `git status` output | git file state |
+|-|-|
+| `Untracked files` | shows untracked files |
+| `Changes not staged for commit` | shows modified files |
+| `Changes to be committed` | shows staged files |
+| `nothing to commit, working tree clean` | all files are in tracked state |
+
+Keep in mind that file could be in `staged` and `modified` state at the same moment.
