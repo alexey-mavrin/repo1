@@ -73,3 +73,17 @@ for each commit, it shows
 Note: it is worth mentioning, that one can use shortened version of git hash,
 long enough for uniquely select the commit in this particular repo. Those shortened
 hashes could be produced by `git log --oneline` command.
+
+## HEAD
+
+`HEAD` refers to two things in git.
+1. File `.git/HEAD`, containing the reference to the file with the last commit made
+2. The position in the current branch, from which successive commit will be made.
+
+```
+# cat .git/HEAD
+ref: refs/heads/main
+
+# cat .git/refs/heads/main
+2ce5430bdd3a1344f84096361c244a411809cb0a
+```
