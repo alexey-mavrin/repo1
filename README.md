@@ -48,3 +48,14 @@ or just push commits
 ```
 git push
 ```
+
+# Git info and glossary
+
+## Commit Hash
+
+Commit Hash is the long hex string, uniquely identified the commit.
+It corresponds to SHA-1 checksum.
+
+Note: it is worth mentioning, that one can use shortened version of git hash,
+long enough for uniquely select the commit in this particular repo. Those shortened
+hashes could be produced by `git log --oneline` command.
