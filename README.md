@@ -87,3 +87,31 @@ ref: refs/heads/main
 # cat .git/refs/heads/main
 2ce5430bdd3a1344f84096361c244a411809cb0a
 ```
+
+## File states
+
+There are several file states in git:
+- untracked
+- tracked
+- staged
+- modified
+
+Initially, when file is created in git repository, it has the `untracked` state.
+Then, with `git add file_name`, it moves to `staged` state. It also has `tracked`
+state, ant remains in `tracked` all the time until the file is removed from the repo.
+
+When changes are committed, the file state is just the `tracked`.
+
+After the `staged` or `tracked` file is modified, and before `git add` command
+is issued, the file has the `modified` state.
+
+```mermaid
+flowchart TD;
+  U[untracked] --> ST[staged, tracked];
+  ST --> T[tracked];
+  ST --> MT[modified, tracked];
+  MT --> ST;
+  T --> MT;
+```
+
+Note that file states could be observed via `git state` command.
