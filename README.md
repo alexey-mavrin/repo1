@@ -56,6 +56,20 @@ git push
 Commit Hash is the long hex string, uniquely identified the commit.
 It corresponds to SHA-1 checksum.
 
+## Git log
+
+To get the commit history, use the following command:
+```
+git log
+```
+
+This command presents the list of commit, starting from the most recent;
+for each commit, it shows
+- commit hash
+- commit author
+- date of the commit
+- commit message
+
 Note: it is worth mentioning, that one can use shortened version of git hash,
 long enough for uniquely select the commit in this particular repo. Those shortened
 hashes could be produced by `git log --oneline` command.
