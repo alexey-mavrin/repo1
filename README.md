@@ -1,11 +1,50 @@
-# Header 1
+# Useful Git commands
 
-## Header 2
+## Initial commands
 
-text line 1  
-line 2  line2 again 
-line 2 again
+Create new repository
 
----
+```
+mkdir repo && cd repo
+git init
+```
 
-under the line
+Link repo with a remote
+
+```
+git remote add origin git@github.com:alexey-mavrin/repo.git
+```
+
+where `origin` is the conventional name.
+Note that `repo` should already exist.
+
+## Branchs and commits
+
+Set the default branch
+
+```
+git config init.defaultBranch main
+```
+
+Create commit
+
+```
+cat > file.txt << EOF
+Hello
+EOF
+
+git add file.txt
+git commit -m "file.txt: some change"
+```
+
+Push commits and link branch name and the remote
+
+```
+git push -u origin main
+```
+
+or just push commits
+
+```
+git push
+```
